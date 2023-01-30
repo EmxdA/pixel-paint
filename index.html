@@ -4,18 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Pixel Paint</title>
   </head>
   <body>
-    <h1>Pixel Paint</h1>
+    <h1 id="mainHeading">Pixel Paint</h1>
     <div id="canvasContainer"></div>
     <div id="menuOptions">
-      <input type="color" id="colorPicker" value="#0000ff"> 
-      <button class="rainbowBtn">Rainbow!</button>
-      <button class="gradientBtn">Gradient!</button>
-      <button class="sizeBtn">Set Grid Size</button>
-      <button class="clearGridBtn">Clear Grid</button>
+      <button id="colorBtn">
+        <input type="color" id="colorPicker" value="#00b4d8" />
+      </button>
+      <div id="menuFlexContainer">
+        <button class="rainbowBtn">Rainbow</button>
+        <button class="gradientBtn">Gradient</button>
+        <button class="sizeBtn">Grid Size</button>
+        <button class="eraseBtn">Eraser</button>
+        <button class="clearGridBtn">Clear</button>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>

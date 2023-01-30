@@ -5,10 +5,13 @@ const clearBtn = document.querySelector(".clearGridBtn");
 const rainbowBtn = document.querySelector(".rainbowBtn");
 const gradientBtn = document.querySelector(".gradientBtn");
 const colorPicker = document.querySelector("#colorPicker");
+const colorBtn = document.querySelector("#colorBtn");
+const eraseBtn = document.querySelector(".eraseBtn");
 const defaultGrid = 16;
 let solidColor = true;
 let rainbowColor = false;
 let gradientColor = false;
+let erase = false;
 let mouseEventStatus = false;
 
 let dynamicDivCreator = (dimensions) => {
@@ -29,12 +32,11 @@ let dynamicDivCreator = (dimensions) => {
 let clearGrid = () => {
   childNodes = canvasContainer.childNodes;
   for (let i = 0; i < childNodes.length; i++) {
-    childNodes[i].setAttribute("style", "background-color: white;");
+    childNodes[i].setAttribute("style", "background-color: #FFFF;");
   }
 };
 
 let boxPressed = (e) => {
-  console.log("hii");
   let isPixel = e.target.nodeName === "DIV";
 
   if (!isPixel || e.target.id == "canvasContainer") {
@@ -65,6 +67,10 @@ let boxPressed = (e) => {
       .querySelector("#" + e.target.id)
       .setAttribute("style", "background-color: " + divColor + ";");
     console.log(e.target.id);
+  } else if (erase){
+    document
+      .querySelector("#" + e.target.id)
+      .setAttribute("style", "background-color: #FFFF;");
   }
 };
 
@@ -100,17 +106,35 @@ sizeBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", clearGrid);
 
 rainbowBtn.addEventListener("click", () => {
-  (solidColor = false), (rainbowColor = true), (gradientColor = false);
+  (solidColor = false),
+    (rainbowColor = true),
+    (gradientColor = false),
+    (erase = false);
 });
 
 gradientBtn.addEventListener("click", () => {
-  (solidColor = false), (rainbowColor = false), (gradientColor = true);
+  (solidColor = false),
+    (rainbowColor = false),
+    (gradientColor = true),
+    (erase = false);
 });
 
 colorPicker.addEventListener("change", () => {
-  (solidColor = true), (rainbowColor = false), (gradientColor = false);
+  (solidColor = true),
+    (rainbowColor = false),
+    (gradientColor = false),
+    (erase = false);
+  colorBtn.setAttribute("style", "background-color:" + colorPicker.value + ";");
 });
 
-window.onload = () =>{
+eraseBtn.addEventListener("click", () => {
+  (solidColor = false),
+    (rainbowColor = false),
+    (gradientColor = false),
+    (erase = true);
+});
+
+window.onload = () => {
+  colorBtn.setAttribute("style", "background-color:" + colorPicker.value + ";");
   dynamicDivCreator(defaultGrid);
-}
+};
