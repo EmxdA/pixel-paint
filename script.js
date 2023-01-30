@@ -1,5 +1,6 @@
 const canvasContainer = document.querySelector("#canvasContainer");
 const sizeBtn = document.querySelector(".sizeBtn");
+const clearBtn = document.querySelector(".clearGridBtn");
 
 let dynamicDivCreator = (dimensions) => {
   canvasContainer.innerHTML = "";
@@ -16,16 +17,21 @@ let dynamicDivCreator = (dimensions) => {
   );
 };
 
-const boxPressed = (e) => {
-  const isPixel = e.target.nodeName === "DIV";
+let clearGrid = () => {
+    childNodes = canvasContainer.childNodes
+    for (let i =0; i < childNodes.length; i++){
+        childNodes[i].setAttribute('style', 'background-color: white;');
+    }
+}
+
+let boxPressed = (e) => {
+  let isPixel = e.target.nodeName === "DIV";
 
   if (!isPixel || e.target.id == "canvasContainer") {
     return;
   }
 
-  document
-    .querySelector("#" + e.target.id)
-    .setAttribute("style", "background-color: red;");
+  document.querySelector("#" + e.target.id).setAttribute("style", "background-color: red;");
   console.log(e.target.id);
 };
 
@@ -34,5 +40,6 @@ sizeBtn.addEventListener("click", () => {
   let sizeOption = prompt("Enter desired size grid");
   dynamicDivCreator(sizeOption);
 });
+clearBtn.addEventListener("click", clearGrid);
 
 dynamicDivCreator(8);
