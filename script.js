@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const canvasContainer = document.querySelector("#canvasContainer");
 const sizeBtn = document.querySelector(".sizeBtn");
 const clearBtn = document.querySelector(".clearGridBtn");
@@ -71,6 +72,10 @@ let rainbowColowGenerator = () => {
   let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
   return color;
 };
+
+body.addEventListener("mouseup", (event) => {
+  mouseEventStatus = false;
+});
 
 canvasContainer.addEventListener("mousedown", (event) => {
   boxPressed(event);
