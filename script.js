@@ -67,7 +67,7 @@ let boxPressed = (e) => {
       .querySelector("#" + e.target.id)
       .setAttribute("style", "background-color: " + divColor + ";");
     console.log(e.target.id);
-  } else if (erase){
+  } else if (erase) {
     document
       .querySelector("#" + e.target.id)
       .setAttribute("style", "background-color: #FFFF;");

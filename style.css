@@ -1,70 +1,70 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #14213d;
+  background-color: #14213d;
 }
 
 #mainHeading {
-    font-family: 'VT323', monospace;
-    color: #fca311;
-    font-size: 86px;
-    text-align: center;
-    margin-top: 30px;
+  font-family: "VT323", monospace;
+  color: #fca311;
+  font-size: 86px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 #canvasContainer {
-    width: 600px;
-    height: 600px;
-    display: block;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: move;
+  width: 600px;
+  height: 600px;
+  display: block;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: move;
 }
 
 #menuOptions {
-    width: 600px;
-    margin: auto;
+  width: 600px;
+  margin: auto;
 }
 
-input[type="color"]  {
-    height: 50px;
-    width: 600px;
-    opacity: 0;
+input[type="color"] {
+  height: 50px;
+  width: 600px;
+  opacity: 0;
 }
 
 input[type="color"]:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #menuFlexContainer {
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
 }
 
 #colorBtn {
-    display: block;
-    margin: auto;
-    width: 600px;
+  display: block;
+  margin: auto;
+  width: 600px;
 }
 
 button {
-    height: 50px;
-    width: 100px;
-    border: none;
-    border-radius: 2px;
-    background-color: #fca311;
-    color: #14213d;
-    font-family: 'VT323', monospace;
-    font-size: 24px;
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 2px;
+  background-color: #fca311;
+  color: #14213d;
+  font-family: "VT323", monospace;
+  font-size: 24px;
 }
 
 button:hover {
-    background-color: #fca211d3;
-    cursor: pointer;
+  background-color: #fca211d3;
+  cursor: pointer;
 }
