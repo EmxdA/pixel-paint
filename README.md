@@ -1,4 +1,4 @@
-# pixel-paint
+![Pixel_Paint](https://user-images.githubusercontent.com/81132948/215713099-ca6d9e3d-30a9-442f-88c6-098a54068387.png)
 
 
 #### <a href="https://emxda.github.io/pixel-paint/">Live Preview</a>
