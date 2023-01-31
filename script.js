@@ -7,6 +7,7 @@ const gradientBtn = document.querySelector(".gradientBtn");
 const colorPicker = document.querySelector("#colorPicker");
 const colorBtn = document.querySelector("#colorBtn");
 const eraseBtn = document.querySelector(".eraseBtn");
+const burshBtn = document.querySelector(".brushBtn");
 const defaultGrid = 16;
 let solidColor = true;
 let rainbowColor = false;
@@ -129,6 +130,13 @@ colorPicker.addEventListener("change", () => {
 
 eraseBtn.addEventListener("click", () => {
   (solidColor = false),
+    (rainbowColor = false),
+    (gradientColor = false),
+    (erase = true);
+});
+
+burshBtn.addEventListener("click", () => {
+  (solidColor = true),
     (rainbowColor = false),
     (gradientColor = false),
     (erase = true);

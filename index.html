@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +17,13 @@
     <h1 id="mainHeading">Pixel Paint</h1>
     <div id="canvasContainer"></div>
     <div id="menuOptions">
-      <button id="colorBtn">
-        <input type="color" id="colorPicker" value="#00b4d8" />
-      </button>
+      <div id="topRow">
+        <button id="colorBtn">
+          <input type="color" id="colorPicker" value="#00b4d8" />
+        </button>
+
+        <button class="brushBtn">Set Solid</button>
+      </div>
       <div id="menuFlexContainer">
         <button class="rainbowBtn">Rainbow</button>
         <button class="gradientBtn">Gradient</button>
