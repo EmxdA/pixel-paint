@@ -5,3 +5,5 @@ https://emxda.github.io/pixel-paint/
 
 
 ![emxda github io_pixel-paint_](https://user-images.githubusercontent.com/81132948/215709474-85b705fb-540f-4ad3-9161-2291fdc776ca.png)
+
+![emxda github io_pixel-paint_ (2)](https://user-images.githubusercontent.com/81132948/215709785-2bd29fec-8bb7-4215-a8e1-f6306e4a36e8.png)
