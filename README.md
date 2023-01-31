@@ -1,7 +1,7 @@
 # pixel-paint
 
 
-## <a href="https://emxda.github.io/pixel-paint/">Live Preview</a>
+#### <a href="https://emxda.github.io/pixel-paint/">Live Preview</a>
 
 
 
