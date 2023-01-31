@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "VT323", monospace;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
 }
 
 #mainHeading {
-  font-family: "VT323", monospace;
   color: #fca311;
   font-size: 86px;
   text-align: center;
@@ -22,7 +22,6 @@ body {
   margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #menuOptions {
@@ -63,11 +62,49 @@ button {
   border-radius: 2px;
   background-color: #fca311;
   color: #14213d;
-  font-family: "VT323", monospace;
   font-size: 24px;
 }
 
 button:hover {
   background-color: #fca211d3;
   cursor: pointer;
+}
+
+#gridSizePopup {
+  color: #14213d;
+  background-color: #fca311;
+  height: 200px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 300px;
+  visibility: hidden;
+}
+
+#gridSizePopup h3 {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+#size {
+  margin-top: 20px;
+  height: 30px;
+  font-size: 20px;
+  color: #14213d;
+}
+
+#gridSizePopup button {
+  color:#fca311;
+  background-color: #14213d;
+  margin: 20px;
+}
+
+#gridSizePopup button:hover {
+  background-color: #14213dd3;
 }

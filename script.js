@@ -8,6 +8,10 @@ const colorPicker = document.querySelector("#colorPicker");
 const colorBtn = document.querySelector("#colorBtn");
 const eraseBtn = document.querySelector(".eraseBtn");
 const burshBtn = document.querySelector(".brushBtn");
+const gridSizePopup = document.querySelector("#gridSizePopup");
+const sizeInput = document.querySelector("#size");
+const confirmSize = document.querySelector("#confirmSize");
+const cancel = document.querySelector("#cancel");
 const defaultGrid = 16;
 let solidColor = true;
 let rainbowColor = false;
@@ -99,9 +103,14 @@ canvasContainer.addEventListener("mouseover", (event) => {
   }
 });
 
-sizeBtn.addEventListener("click", () => {
-  let sizeOption = prompt("Enter desired size grid");
-  dynamicDivCreator(sizeOption);
+sizeBtn.addEventListener("click", () => gridSizePopup.setAttribute("style", "visibility: unset;"));
+
+cancel.addEventListener("click", () => gridSizePopup.setAttribute("style", "visibility: hidden;"));
+
+confirmSize.addEventListener("click", () => {
+  gridSizePopup.setAttribute("style", "visibility: hidden;");
+  dynamicDivCreator(sizeInput.value);
+  sizeInput.value = null;
 });
 
 clearBtn.addEventListener("click", clearGrid);
